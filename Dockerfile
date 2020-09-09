@@ -10,6 +10,5 @@ RUN chmod +x youtubeuploader
 
 FROM golang:alpine
 COPY --from=builder /app/youtubeuploader/youtubeuploader /usr/local/bin/youtubeuploader
-RUN echo $PATH
 
 CMD [ "youtubeuploader", "--help" ]
